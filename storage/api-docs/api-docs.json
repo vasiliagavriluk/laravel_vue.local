@@ -1,0 +1,51 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/auth/login": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "Email",
+                        "in": "query",
+                        "description": "users@mail.ru",
+                        "required": false
+                    },
+                    {
+                        "parameter": "eventID_in_query",
+                        "name": "Passord",
+                        "in": "query",
+                        "description": "123123",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Token"
+                    }
+                }
+            }
+        },
+        "/api/auth/register": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                }
+            }
+        },
+        "/api/auth/logout": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                }
+            }
+        }
+    }
+}

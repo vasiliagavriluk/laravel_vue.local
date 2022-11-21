@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Scripts -->
+    <link href="/js/bootstrap.js" rel="stylesheet">
+    @vite(['resources/js/app.js','resources/css/app.css'])
+</head>
+<body>
+    <div class="container p-3 pb-md-4 mx-auto text-center">
+
+        <div id="app">
+                <main class="py-4">
+                    @yield('content')
+                </main>
+        </div>
+
+    </div>
+</body>
+</html>
